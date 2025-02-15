@@ -20,13 +20,13 @@ const HomePage: FC = () => {
         />
       </div>
       <section className="container mx-auto py-10 text-black text-center">
-        <h2 className="text-3xl py-4 font-bold bg-blue-500 text-white border rounded">
+        <h2 className="text-3xl py-4 font-bold bg-black text-white border rounded">
           Welcome to Our Church
         </h2>
         <div className="text-lg px-4 py-4 rounded bg-white">
           <p className="text-xl">All are welcome</p>
 
-          <h3 className="text-2xl bg-blue-500 text-white border rounded mt-2">
+          <h3 className="text-2xl bg-black text-white border rounded mt-2">
             Spreading the Gospel
           </h3>
           <p className="mt-2">
@@ -39,7 +39,7 @@ const HomePage: FC = () => {
             {bannerText.map((item, index) => (
               <div
                 key={index}
-                className="text-xl px-4 py-2 bg-blue-500 text-white font-bolds rounded m-2"
+                className="text-xl px-4 py-2 bg-black text-white font-bolds rounded m-2"
               >
                 {item}
               </div>
@@ -51,7 +51,7 @@ const HomePage: FC = () => {
         className="container mx-auto py-10 text-black text-center bg-white"
         id="services"
       >
-        <h2 className="text-3xl py-4 font-bold bg-blue-500 text-white border rounded">
+        <h2 className="text-3xl py-4 font-bold bg-black text-white border rounded">
           Service Times &amp; Location
         </h2>
         <p>
