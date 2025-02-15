@@ -1,101 +1,81 @@
+import type { FC } from "react";
 import Image from "next/image";
 
-export default function Home() {
+const HomePage: FC = () => {
+  const bannerText = [
+    "Changing Lives",
+    "Making Disciples",
+    "Changing the World",
+  ];
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="">
+      <div className="relative w-full h-[50vh] md:h-[80vh] lg:h-[100vh]">
+        {/* <div className="w-100 "> */}
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/images/building.png"
+          alt="Hero Background"
+          layout="fill"
+          // objectFit="cover" // Ensure it covers the area on larger screens
+          // className="object-contain object-center md:object-cover"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </div>
+      <section className="container mx-auto py-10 text-black text-center">
+        <h2 className="text-3xl py-4 font-bold bg-blue-500 text-white border rounded">
+          Welcome to Our Church
+        </h2>
+        <div className="text-lg px-4 py-4 rounded bg-white">
+          <p className="text-xl">All are welcome</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <h3 className="text-2xl bg-blue-500 text-white border rounded mt-2">
+            Spreading the Gospel
+          </h3>
+          <p className="mt-2">
+            The Potter&apos;s House Christian Church enthusiastically follows
+            Jesus&apos; words to share the Gospel with the world. We&apos;re a
+            local church making a big difference by sharing the life-changing
+            message of Jesus Christ. Come be a part of it!
+          </p>
+          <div className="flex justify-center flex-col md:flex-row">
+            {bannerText.map((item, index) => (
+              <div
+                key={index}
+                className="text-xl px-4 py-2 bg-blue-500 text-white font-bolds rounded m-2"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      <section
+        className="container mx-auto py-10 text-black text-center bg-white"
+        id="services"
+      >
+        <h2 className="text-3xl py-4 font-bold bg-blue-500 text-white border rounded">
+          Service Times &amp; Location
+        </h2>
+        <p>
+          <span className="font-bold text-xl">Sunday:</span>
+          <span className="text-lg">11:00am</span>
+        </p>
+        <p>
+          <span className="font-bold text-xl">Wednesday:</span>
+          <span className="text-lg">7:00pm</span>
+        </p>
+        <div className="flex justify-center">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3115.394827472621!2d-122.58550102358275!3d45.32961134240829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549570c88b03e147%3A0xbc3c88571d127ac!2s19146%20Molalla%20Ave%20A%2C%20Oregon%20City%2C%20OR%2097045!5e1!3m2!1sen!2sus!4v1739492733637!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default HomePage;
