@@ -46,6 +46,7 @@ const ContactForm: React.FC = () => {
         });
       }
     } catch (err) {
+      console.warn(err);
       setIsSubmitting(false);
       setAlert({
         type: "error",
