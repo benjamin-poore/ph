@@ -9,7 +9,7 @@ const Footer = () => {
       {" "}
       {/* Tailwind CSS classes */}
       <div className="container mx-auto text-center">
-        <p>&copy; {currentYear} Potters House Oregon City</p>
+        <p>&copy; {currentYear} Potter&pos;s House Oregon City</p>
         <nav className="mt-2">
           <Link href="/contact" className="text-gray-300 hover:text-white mr-4">
             Contact
@@ -18,7 +18,7 @@ const Footer = () => {
         </nav>
         <p className="mt-2 text-sm text-gray-400">
           {/* Optional: Add a small tagline or mission statement */}
-          The Potter's House Church Oregon City
+          The Potter&pos;s House Church Oregon City
         </p>
       </div>
     </footer>
