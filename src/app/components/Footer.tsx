@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-4 mt-8">
       <div className="container mx-auto text-center">
-        <p>&copy; {currentYear} Potter&pos;s House Oregon City</p>
+        <p>&copy; {currentYear} Potter&apos;s House Oregon City</p>
         <nav className="mt-2">
           <Link href="/contact" className="text-gray-300 hover:text-white mr-4">
             Contact
@@ -16,7 +16,7 @@ const Footer = () => {
         </nav>
         <p className="mt-2 text-sm text-gray-400">
           {/* Optional: Add a small tagline or mission statement */}
-          The Potter&pos;s House Church Oregon City
+          The Potter&apos;s House Church Oregon City
         </p>
       </div>
     </footer>
